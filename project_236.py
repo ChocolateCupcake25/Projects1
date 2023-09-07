@@ -19,12 +19,13 @@ actor_list = []
 
 #define generate_lidar_blueprint function
 def generate_lidar_blueprint(blueprint_library):
-    lidar_blueprint = blueprint_library.find('sensor.lidar.ray_cast_semantic')
+    lidar_blueprint = blueprint_library.find("sensor.lidar.ray_cast_semantic")
     lidar_blueprint.set_attribute('channels',str(64))
-    lidar_blueprint.set_attribute('points_per_seconds',str(56000))
+    lidar_blueprint.set_attribute('points_per_second',str(56000))
     lidar_blueprint.set_attribute('rotation_frequency',str(40))
     lidar_blueprint.set_attribute('range',str(100))
-    return lidar_blueprint 
+    return lidar_blueprint
+
 
 object_id = {"None": 0,
              "Buildings": 1,
